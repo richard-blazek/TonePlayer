@@ -4,8 +4,6 @@
 #include <SDL2/SDL.h>
 #include "AudioFile/AudioFile.h"
 
-#include "tones/tone.h"
-
 constexpr double Interval = std::pow(2.0, 1.0 / 12.0);
 
 template <typename T>
@@ -150,7 +148,7 @@ int main(int argc, char *argv[])
 	}
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	SDL_Window *screen = SDL_CreateWindow("Pokus", 50, 50, 1200, 600, SDL_WINDOW_RESIZABLE);
+	SDL_Window *screen = SDL_CreateWindow("Tone Player", 50, 50, 1200, 600, SDL_WINDOW_RESIZABLE);
 	SDL_Renderer *rend = SDL_CreateRenderer(screen, -1, 0);
 	SDL_RenderPresent(rend);
 
